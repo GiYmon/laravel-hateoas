@@ -30,7 +30,7 @@ class HasLinksTest extends TestCase
     }
 
     /** @test */
-    public function it_calls_hateaos_generate_method_with_resource_class_if_no_other_class_specified()
+    public function test_it_calls_hateaos_generate_method_with_resource_class_if_no_other_class_specified()
     {
         Hateoas::shouldReceive('generate')
             ->once()
@@ -41,7 +41,7 @@ class HasLinksTest extends TestCase
     }
 
     /** @test */
-    public function it_calls_hateaos_generate_method_with_explicitly_provided_class()
+    public function test_it_calls_hateaos_generate_method_with_explicitly_provided_class()
     {
         Hateoas::shouldReceive('generate')
             ->once()
@@ -52,7 +52,7 @@ class HasLinksTest extends TestCase
     }
 
     /** @test */
-    public function it_calls_hateaos_generate_method_with_extra_arguments()
+    public function test_it_calls_hateaos_generate_method_with_extra_arguments()
     {
         Hateoas::shouldReceive('generate')
             ->once()
@@ -63,7 +63,7 @@ class HasLinksTest extends TestCase
     }
 
     /** @test */
-    public function it_calls_hateaos_generate_method_with_extra_arguments_provided_via_class_parameter()
+    public function test_it_calls_hateaos_generate_method_with_extra_arguments_provided_via_class_parameter()
     {
         Hateoas::shouldReceive('generate')
             ->once()

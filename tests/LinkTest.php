@@ -8,13 +8,13 @@ use GDebrauwer\Hateoas\Link;
 class LinkTest extends TestCase
 {
     /** @test */
-    public function it_can_be_created_using_static_method()
+    public function test_it_can_be_created_using_static_method()
     {
         $this->assertInstanceOf(Link::class, Link::make('message.show', ['message' => 1]));
     }
 
     /** @test */
-    public function it_uses_the_route_name_as_name_by_default()
+    public function test_it_uses_the_route_name_as_name_by_default()
     {
         $link = new Link('message.show', ['message' => 1]);
 
@@ -22,7 +22,7 @@ class LinkTest extends TestCase
     }
 
     /** @test */
-    public function it_can_be_given_a_name()
+    public function test_it_can_be_given_a_name()
     {
         $link = new Link('message.show', ['message' => 1]);
         $link->as('random_name');
@@ -31,7 +31,7 @@ class LinkTest extends TestCase
     }
 
     /** @test */
-    public function it_can_get_the_http_method_of_the_route()
+    public function test_it_can_get_the_http_method_of_the_route()
     {
         $postRouteLink = new Link('message.store');
         $getRouteLink = new Link('message.show', ['message' => 1]);
@@ -45,7 +45,7 @@ class LinkTest extends TestCase
     }
 
     /** @test */
-    public function it_throws_link_exception_if_it_can_not_find_route_by_name_when_trying_to_get_http_method_of_route()
+    public function test_it_throws_link_exception_if_it_can_not_find_route_by_name_when_trying_to_get_http_method_of_route()
     {
         $link = (new Link('random.route'))->as('randomlink');
 
@@ -56,7 +56,7 @@ class LinkTest extends TestCase
     }
 
     /** @test */
-    public function it_can_get_the_path_of_the_route()
+    public function test_it_can_get_the_path_of_the_route()
     {
         $link = new Link('message.show', ['message' => 1]);
 
@@ -64,7 +64,7 @@ class LinkTest extends TestCase
     }
 
     /** @test */
-    public function it_throws_link_exception_if_it_can_not_find_route_by_name_when_trying_to_get_path_of_route()
+    public function test_it_throws_link_exception_if_it_can_not_find_route_by_name_when_trying_to_get_path_of_route()
     {
         $link = (new Link('random.route'))->as('randomlink');
 
@@ -75,7 +75,7 @@ class LinkTest extends TestCase
     }
 
     /** @test */
-    public function it_throws_link_exception_if_it_misses_route_parameters_when_trying_to_get_path_of_route()
+    public function test_it_throws_link_exception_if_it_misses_route_parameters_when_trying_to_get_path_of_route()
     {
         $link = (new Link('message.show'))->as('self');
 
@@ -86,7 +86,7 @@ class LinkTest extends TestCase
     }
 
     /** @test */
-    public function it_can_get_the_full_url_of_the_route()
+    public function test_it_can_get_the_full_url_of_the_route()
     {
         $link = new Link('message.show', ['message' => 1]);
 
@@ -94,7 +94,7 @@ class LinkTest extends TestCase
     }
 
     /** @test */
-    public function it_throws_link_exception_if_it_can_not_find_route_by_name_when_trying_to_get_full_url_of_route()
+    public function test_it_throws_link_exception_if_it_can_not_find_route_by_name_when_trying_to_get_full_url_of_route()
     {
         $link = (new Link('random.route'))->as('randomlink');
 
@@ -105,7 +105,7 @@ class LinkTest extends TestCase
     }
 
     /** @test */
-    public function it_throws_link_exception_if_it_misses_route_parameters_when_trying_to_get_full_url_of_route()
+    public function test_it_throws_link_exception_if_it_misses_route_parameters_when_trying_to_get_full_url_of_route()
     {
         $link = (new Link('message.show'))->as('self');
 
@@ -116,7 +116,7 @@ class LinkTest extends TestCase
     }
 
     /** @test */
-    public function it_can_get_the_route_name()
+    public function test_it_can_get_the_route_name()
     {
         $link = new Link('message.show', ['message' => 1]);
 

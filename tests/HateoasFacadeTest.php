@@ -8,7 +8,7 @@ use GDebrauwer\Hateoas\HateoasManager;
 class HateoasFacadeTest extends TestCase
 {
     /** @test */
-    public function it_returns_an_hateaos_manager_instance()
+    public function test_it_returns_an_hateaos_manager_instance()
     {
         $this->assertInstanceOf(HateoasManager::class, Hateoas::getFacadeRoot());
     }
