@@ -36,7 +36,7 @@ class DefaultFormatterTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_an_array_containing_arrays()
+    public function test_it_returns_an_array_containing_arrays()
     {
         $result = $this->formatter->format($this->links);
 
@@ -48,7 +48,7 @@ class DefaultFormatterTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_array_of_arrays_that_each_have_rel_key_containing_name_of_their_link()
+    public function test_it_returns_array_of_arrays_that_each_have_rel_key_containing_name_of_their_link()
     {
         $result = $this->formatter->format($this->links);
 
@@ -60,7 +60,7 @@ class DefaultFormatterTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_array_of_arrays_that_each_have_type_key_containing_http_method_of_their_link()
+    public function test_it_returns_array_of_arrays_that_each_have_type_key_containing_http_method_of_their_link()
     {
         $result = $this->formatter->format($this->links);
 
@@ -72,7 +72,7 @@ class DefaultFormatterTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_an_array_with_href_key_containing_url_of_link()
+    public function test_it_returns_an_array_with_href_key_containing_url_of_link()
     {
         $result = $this->formatter->format($this->links);
 

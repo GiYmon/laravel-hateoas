@@ -9,13 +9,13 @@ use GDebrauwer\Hateoas\HateoasManager;
 class HateaosServiceProviderTest extends TestCase
 {
     /** @test */
-    public function it_registers_singleton_for_hateaos_manager()
+    public function test_it_registers_singleton_for_hateaos_manager()
     {
         $this->assertInstanceOf(HateoasManager::class, app('hateoas'));
     }
 
     /** @test */
-    public function it_binds_formatter_interface_to_default_formatter_class()
+    public function test_it_binds_formatter_interface_to_default_formatter_class()
     {
         $this->assertInstanceOf(DefaultFormatter::class, app(Formatter::class));
     }

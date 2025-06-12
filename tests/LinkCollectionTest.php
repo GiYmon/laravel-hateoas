@@ -8,7 +8,7 @@ use GDebrauwer\Hateoas\LinkCollection;
 class LinkCollectionTest extends TestCase
 {
     /** @test */
-    public function it_can_format_links_using_the_class_binded_to_formatter_interface()
+    public function test_it_can_format_links_using_the_class_binded_to_formatter_interface()
     {
         $links = new LinkCollection();
 

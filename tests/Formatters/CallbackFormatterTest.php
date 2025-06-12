@@ -29,7 +29,7 @@ class CallbackFormatterTest extends TestCase
     }
 
     /** @test */
-    public function it_returns_an_array_formatted_using_the_callback_of_the_formatter()
+    public function test_it_returns_an_array_formatted_using_the_callback_of_the_formatter()
     {
         $callback = function (LinkCollection $links) {
             return $links->map(function ($link) {
